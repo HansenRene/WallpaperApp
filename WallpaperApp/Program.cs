@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Drawing;
 using System.IO;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
-using System.Diagnostics; // Add this namespace
+using System.Diagnostics; 
 
 // app.manifest content is important to disable DPI awarenes.
-
 
 class Program
 {
@@ -59,9 +57,7 @@ class Program
         int width = screen.Bounds.Width;
         int height = screen.Bounds.Height;
         var resolution = $"{width}x{height}";
-
         var wallpaperPath = Path.Combine(WallpaperApp.Properties.Settings.Default.WallpaperPath, $"wallpaper_{resolution}.png");
-
         Debug.WriteLine($"Constructed wallpaper path: {wallpaperPath}");
 
         if (File.Exists(wallpaperPath))
