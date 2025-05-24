@@ -1,6 +1,6 @@
 Upon executing, the program will detect screen resolution, and select a matching file named "wallpaper_{width}x{height}.png" from C:\Wallpapers (path configurable from Settings file)
 
-Default path is subject to change, and settings will probably chance location as well, to a more enteprise friendly location, (like the registry).
+Default path is subject to change, and settings will probably chance location as well, to a more enterprise friendly location, (like the registry).
 
 The goal is to allow enforcing a wallpaper that matches client screen resolution.
 
