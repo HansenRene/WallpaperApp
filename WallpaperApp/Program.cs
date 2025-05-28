@@ -164,7 +164,6 @@ class Program
         string aspectRatio = GetClosestAspectRatio(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
         string wallpaperPath = Path.Combine(WallpaperApp.Properties.Settings.Default.WallpaperPath, $"wallpaper_{aspectRatio}.png");
 
-        WriteLog("Darkmode detected");
         WriteLog($"Resolution: {Screen.PrimaryScreen.Bounds.Width}x{Screen.PrimaryScreen.Bounds.Height}");
 
         if (IsDarkModeEnabled())
@@ -174,7 +173,7 @@ class Program
             Debug.WriteLine($"Constructed wallpaper path: {darkmodeWallpaperpath}");
             if (File.Exists(darkmodeWallpaperpath)){
                 Debug.WriteLine($"Dark wallpaperpath found: {darkmodeWallpaperpath}");
-                WriteLog("Darkmode detected");
+                WriteLog($"Dark wallpaperpath found: {darkmodeWallpaperpath}");
                 SetWallpaper(darkmodeWallpaperpath, "Stretch");
             }
             else
@@ -185,6 +184,7 @@ class Program
         }
         else
         {
+            WriteLog("Lightmode detected");
             SetWallpaper(wallpaperPath, "Stretch");
         }
     }
