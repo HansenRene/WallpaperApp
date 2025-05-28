@@ -25,7 +25,7 @@ namespace WallpaperApp.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Wallpapers")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\ProgramData\\Microsoft\\WallpaperApp\\Wallpapers")]
         public string WallpaperPath {
             get {
                 return ((string)(this["WallpaperPath"]));
