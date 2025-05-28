@@ -133,7 +133,6 @@ class Program
         string logFilePath = Path.Combine(appDirectory, $"{today:yyyy-MM-dd}.log");
         using (StreamWriter writer = new StreamWriter(logFilePath, true))
         {
-            writer.WriteLine($"Log entry for {DateTime.Now}");
             writer.WriteLine($"{DateTime.Now} - {_message}");
         }
     }
@@ -164,7 +163,9 @@ class Program
         // Purpose: Find screen resolution, detect dark mode, approximate aspect ratio, apply wallpaper
         string aspectRatio = GetClosestAspectRatio(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
         string wallpaperPath = Path.Combine(WallpaperApp.Properties.Settings.Default.WallpaperPath, $"wallpaper_{aspectRatio}.png");
-        Debug.WriteLine($"Constructed wallpaper path: {wallpaperPath}");
+
+        WriteLog("Darkmode detected");
+        WriteLog($"Resolution: {Screen.PrimaryScreen.Bounds.Width}x{Screen.PrimaryScreen.Bounds.Height}");
 
         if (IsDarkModeEnabled())
         {
