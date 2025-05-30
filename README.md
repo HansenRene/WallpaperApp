@@ -5,4 +5,9 @@ The goal is to allow enforcing a wallpaper that matches client screen resolution
 
 PNG format images is being used to avoid the TranscodedWallpaper workaround for getting around company enforced wallpapers that is applicable when using jpg.
 
+Deployment example:
+Copying the WallpaperApp.exe + WallpaperApp.exe.config to client (C:\ProgramData\Microsoft\WallpaperApp), 
+Create Schedule task to call the .exe with triggers for device unlock and account logon.
+
 The Program produces a logfile in %LocalAppdata%\WallpaperApp
+![image](https://github.com/user-attachments/assets/91fce1c5-9713-45c1-b23e-d5a3e14ebad3)
