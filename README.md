@@ -4,3 +4,5 @@ If dark mode is enabled it will check if Wallpaper_16_9_Dark.png exist and apply
 The goal is to allow enforcing a wallpaper that matches client screen resolution.
 
 PNG format images is being used to avoid the TranscodedWallpaper workaround for getting around company enforced wallpapers that is applicable when using jpg.
+
+The Program produces a logfile in %LocalAppdata%\WallpaperApp
